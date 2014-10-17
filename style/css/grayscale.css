@@ -7,7 +7,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: rgba(255, 255, 255, 0.82);
     background-color: rgb(15, 15, 15);
 }
@@ -138,7 +138,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/IMG_4206.jpg) no-repeat bottom center scroll;
+    background: url(../../img/IMG_4206.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -193,7 +193,7 @@ a:focus {
 .btn-circle:focus {
     outline: 0;
     color: #fff;
-    background: rgba(255,255,255,.1);
+    background: rgba(255,255,255);
 }
 
 .btn-circle i.animated {
@@ -324,6 +324,7 @@ footer {
 
 footer p {
     margin: 0;
+    font-size: 15px
 }
 
 ::-moz-selection {
@@ -345,6 +346,11 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
