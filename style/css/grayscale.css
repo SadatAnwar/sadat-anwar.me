@@ -146,6 +146,20 @@ a:focus {
     -o-background-size: cover;
 }
 
+.intro-page {
+    display: table;
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+    padding: 300px 0;
+    text-align: center;
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
