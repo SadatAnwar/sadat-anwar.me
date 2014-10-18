@@ -274,7 +274,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 100px;
     }
 
     .download-section {
@@ -287,6 +287,21 @@ a:focus {
     }
 }
 
+@media(min-height:700px) {
+    .content-section {
+        padding-top: 100px;
+        height: 100%;
+    }
+
+    .download-section {
+        padding: 100px 0;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
 .btn {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -334,6 +349,7 @@ ul.banner-social-buttons {
 
 footer {
     padding: 20px 0;
+    padding-top: 80px;
 }
 
 footer p {
