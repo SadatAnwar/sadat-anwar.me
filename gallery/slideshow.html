@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, height=device-height" />
+    <meta name="description" content="Personal Bio">
+    <meta name="author" content="Sadat Anwar">
+    
+    <title>Syed Sadat Anwar - Gallery</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../style/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../style/css/grayscale.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="../style/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container text-center">
+
+<!-- Large modal -->
+<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg"></button>
+<a data-toggle="modal" data-target=".bs-example-modal-lg" style="cursor: pointer;">
+    <img class="img-responsive" src="Images/IMG_2798.jpg" alt="">
+</a>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+         /* <?php
+                $dir = glob('Images/*.jpg');
+                $n=1;
+                foreach ($dir as &$image) {
+                    echo "<div id = \"";
+                    echo "image{$n}";
+                    echo    "\" class=\"item\">"; 
+                    echo "<img class=\"img-responsive\" src=\"";
+                    echo $image;
+                    echo "\" alt= \"\">";
+                    echo "</div>";
+                    $n = $n+1;
+"<a data-toggle=\"modal\" data-target=\".bs-example-modal-lg\" style=\"cursor: pointer;\">"
+                }
+            ?>
+            */  
+    </div>
+    <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- jQuery Version 1.11.0 -->
+    <script src="../js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type = "text/jscript">
+        $("#image1").addClass("active");
+    </script>
+</body>

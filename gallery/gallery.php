@@ -12,7 +12,7 @@
     <title>Syed Sadat Anwar - Gallery</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../style/css/grayscale.css" rel="stylesheet">
@@ -75,81 +75,59 @@
             </div>
         </div>
         <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_2798.jpg">
-                    <img class="img-responsive" src="Images/IMG_2798.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_3933.jpg">
-                    <img class="img-responsive" src="Images/IMG_3933.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4206.jpg">
-                    <img class="img-responsive" src="Images/IMG_4206.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_3928.jpg">
-                    <img class="img-responsive" src="Images/IMG_3928.jpg" alt="">
-                </a>
-            </div>
+        
+<?php
+$dir = glob('Images/*.jpg');
+$n =0;
+$numberImages = count($dir);
+$numberRows = $numberImages/4;
+for ($x=0; $x<$numberRows; $x++) {
+    echo "<div class=\"row\">";
+    for ($y=0; $y<4; $y++) {
+        echo "<div class=\"col-md-3 portfolio-item\">";
+        #echo "<a data-toggle=\"modal\" data-target=\".bs-example-modal-lg\" style=\"cursor: pointer;\">";
+        echo "<a href=\"javascript:thisImage({$n})\">";
+        echo "<img class=\"img-responsive\" src=\"";
+        echo $dir{$n};
+        echo "\" alt =\"\"></a></div>";
+        $n = $n+1;
+    }
+    echo "</div>";
+}
+?>
+<div id = "modalSlide" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="mySlide" class="carousel slide" data-interval=false  data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+<?php
+$n=0;
+foreach ($dir as &$image) {
+    echo "<div id = \"";
+    echo "image{$n}";
+    echo    "\" class=\"item\">"; 
+    echo "<img class=\"img-responsive\" src=\"";
+    echo $image;
+    echo "\" alt= \"\">";
+    echo "</div>";
+    $n = $n+1;
+}
+?>
         </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4632.jpg">
-                    <img class="img-responsive" src="Images/IMG_4632.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4631.jpg">
-                    <img class="img-responsive" src="Images/IMG_4631.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4617.jpg">
-                    <img class="img-responsive" src="Images/IMG_4617.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4603.jpg">
-                    <img class="img-responsive" src="Images/IMG_4603.jpg" alt="">
-                </a>
-            </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#mySlide" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#mySlide" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
         </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4445.jpg">
-                    <img class="img-responsive" src="Images/IMG_4445.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4446.jpg">
-                    <img class="img-responsive" src="Images/IMG_4446.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4474-2.jpg">
-                    <img class="img-responsive" src="Images/IMG_4474-2.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="Images/IMG_4474.jpg">
-                    <img class="img-responsive" src="Images/IMG_4474.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
+    </div>
+  </div>
+</div>
+</div>
 
         <!-- Footer -->
         <footer>
@@ -168,7 +146,20 @@
     <script src="../js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script type = "text/jscript">
+        $("#image1").addClass("active");
+        
+        function thisImage(imageID) {
+        
+            for( i=0; i<12; i++){
+                $("#image"+i).removeClass("active"); 
+            }
+            $("#image"+imageID).addClass("active"); 
+            $('#modalSlide').modal('toggle');
+        
+        }
+    </script>
 
 </body>
 
