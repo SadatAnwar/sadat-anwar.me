@@ -95,7 +95,7 @@ for ($x=0; $x<$numberRows; $x++) {
     echo "</div>";
 }
 ?>
-<div id = "modalSlide" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id = "modalSlide" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="Images" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div id="mySlide" class="carousel slide" data-interval=false  data-ride="carousel">
